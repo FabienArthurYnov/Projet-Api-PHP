@@ -17,7 +17,8 @@
             $product = ["NameProduct"=>"None", "TypeProduct"=>null, "DescriptionProduct"=>null, "Price"=>null, "StatusProduct"=>null ];
         }
         if ($product["DescriptionProduct"] != null) {
-            $product["DescriptionProduct"] = json_decode($product["DescriptionProduct"], $associative = true);  #{Image : "http", Description : "description", Tags : "tag1, tag2"}
+            $description_json =  $product["DescriptionProduct"];
+            $product["DescriptionProduct"] = json_decode($description_json, $associative = true);  #{Image : "http", Description : "description", Tags : "tag1, tag2"}
         }
         return $product;
     }
