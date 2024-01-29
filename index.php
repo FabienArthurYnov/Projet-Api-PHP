@@ -11,9 +11,7 @@
 
 <?php
 $url = 'http://localhost:8080/api/address';
-echo file_get_contents($url);
-?>
-<?php
+echo file_get_contents($url);   
 /*
 $url = "http://localhost:8080/api/product";
 
