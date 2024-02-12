@@ -1,5 +1,5 @@
 <?php
-$_POST["ImageLink"] = $_POST["ImageLink"]."\\";
+        $_POST["ImageLink"] = $_POST["ImageLink"]."\\";
         $_POST["Description"] = $_POST["Description"]."\\";
 
         $data = '{"NameProduct":'.$_POST["NameProduct"]
@@ -22,3 +22,5 @@ $_POST["ImageLink"] = $_POST["ImageLink"]."\\";
         $context  = stream_context_create( $options );
         $result = file_get_contents( $url, false, $context );
         $response = json_decode( $result );
+
+header('Location: ../../index.php');
