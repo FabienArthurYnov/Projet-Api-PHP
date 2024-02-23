@@ -60,7 +60,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+							<a href="index.php"><img src="images/home/logo.png" alt="" /></a>
 						</div>
 					</div>
 					<div class="col-sm-8">
@@ -122,6 +122,7 @@
 			</div>
 		</div><!--/header-bottom-->
 	</header><!--/header-->
+<!-- attempt to make a button that executes php by Matth -->
 
 	
 	<section>
