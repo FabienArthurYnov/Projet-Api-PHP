@@ -27,7 +27,6 @@
 <body>
 	<?php 
 	include "./php/product/product.php";
-	echo get_product(1)["DescriptionProduct"];
 	?>
 	<header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->

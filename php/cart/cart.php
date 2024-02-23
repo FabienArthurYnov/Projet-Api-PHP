@@ -14,7 +14,22 @@
         $cart_id = find_user_cart($user_id);
         // let's add the price to the cart
         $cart = get_cart($cart_id);
-        return $all_product;
+        $product = get_product($product_id);
+
+        $product_price = $product["Price"];
+        $cart["Product"] = $cart["Product"] + $product_price;
+        update_cart($cart);
+    }
+
+    
+    function get_cart( $cart_id ) {
+        $url = "http://localhost:8080/api/cart" . '/' . $cart_id;
+        $json_cart = file_get_contents($url);
+        $cart = json_decode($json_cart, $associative = true);
+        if ($cart == null) {
+            $cart = ["Price"=>0, "StatusProduct"=>0, "UserId"=>0];
+        }
+        return $cart;
     }
 
     function find_user_cart( $user_id ) {
@@ -37,7 +52,6 @@
         );
         $context  = stream_context_create( $options );
         $result = file_get_contents( $url, false, $context );
-        $response = json_decode( $result );
 
         // now we should find it
         find_user_cart($user_id);
