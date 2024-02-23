@@ -2,7 +2,7 @@
 
         $data = '{"NameProduct":"'.$_POST["NameProduct"]
                 .'", "TypeProduct":"'.$_POST["TypeProduct"]
-                .'", "Descriptionproduct":"{\"Image\":\"'.$_POST["ImageLink"]
+                .'", "DescriptionProduct":"{\"Image\":\"'.$_POST["ImageLink"]
                     .'\", \"Description\":\"'.$_POST["Description"]
                 .'\"}", "Price":'.$_POST["Price"]
                 .', "StatusProduct":'.$_POST['StatusProduct'].'}';

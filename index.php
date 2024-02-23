@@ -311,7 +311,7 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="images/home/product1.jpg" alt="" />
+											<img src=<?php echo get_product(2)["DescriptionProduct"]["Image"];?> alt="" />
 											<h2>$
 											<?php 
 												echo get_product(2)["Price"];
@@ -347,7 +347,7 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="images/home/product1.jpg" alt="" />
+											<img src=<?php echo get_product(3)["DescriptionProduct"]["Image"];?> alt="" />
 											<h2>$
 											<?php 
 												echo get_product(3)["Price"];
@@ -383,7 +383,7 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="images/home/product1.jpg" alt="" />
+											<img src=<?php echo get_product(4)["DescriptionProduct"]["Image"];?> alt="" />
 											<h2>$
 											<?php 
 												echo get_product(4)["Price"];
@@ -419,7 +419,7 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="images/home/product1.jpg" alt="" />
+											<img src=<?php echo get_product(5)["DescriptionProduct"]["Image"];?> alt="" />
 											<h2>$
 											<?php 
 												echo get_product(5)["Price"];
@@ -455,7 +455,7 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="images/home/product1.jpg" alt="" />
+											<img src=<?php echo get_product(6)["DescriptionProduct"]["Image"];?> alt="" />
 											<h2>$
 											<?php 
 												echo get_product(6)["Price"];
