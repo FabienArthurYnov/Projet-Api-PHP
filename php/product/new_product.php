@@ -1,12 +1,10 @@
 <?php
-        $_POST["ImageLink"] = $_POST["ImageLink"]."\\";
-        $_POST["Description"] = $_POST["Description"]."\\";
 
         $data = '{"NameProduct":"'.$_POST["NameProduct"]
                 .'", "TypeProduct":"'.$_POST["TypeProduct"]
                 .'", "Descriptionproduct":"{\"Image\":\"'.$_POST["ImageLink"]
-                    .'", \"Description\":\"'.$_POST["Description"]
-                .'"}", "Price":'.$_POST["Price"]
+                    .'\", \"Description\":\"'.$_POST["Description"]
+                .'\"}", "Price":'.$_POST["Price"]
                 .', "StatusProduct":'.$_POST['StatusProduct'].'}';
 
         # {"NameProduct":"Jambon", "TypeProduct":"Bouf", "DescriptionProduct":"{\"Image\": \"https://exemple.com\", \"Description\":\"Blabla\"}", "Price": 5.0, "StatusProduct":1}
