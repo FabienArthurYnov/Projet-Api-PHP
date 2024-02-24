@@ -60,7 +60,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+							<a href="index.php"><img src="images/home/logo.png" alt="" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							<div class="btn-group">
@@ -167,10 +167,10 @@
 								<h2><?php echo get_product($_GET['id'])["NameProduct"];?></h2>
 								<span>
 									<span>$ <?php echo get_product($_GET['id'])["Price"];?></span>
-									<button type="button" class="btn btn-fefault cart">
+									<a href="./php/product/add_to_cart.php?id=<?php echo $_GET['id']?>" type="button" class="btn btn-fefault cart">
 										<i class="fa fa-shopping-cart"></i>
 										Add to cart
-									</button>
+									</a>
 								</span>
 								<p><b>Availability:</b> In Stock</p>
 								<p><b>Condition:</b> New</p>

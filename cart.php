@@ -25,6 +25,9 @@
 </head><!--/head-->
 
 <body>
+	<?php
+	include "./php/product/product.php"
+	?>
 	<header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
 			<div class="container">
@@ -164,16 +167,17 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						<?php
+						foreach ($product_list = json_decode($_COOKIE["cart_products"], true) as &$id) {
+							echo '<tr>
 							<td class="cart_product">
-								<a href=""><img src="images/cart/one.png" alt=""></a>
+								<a href=""><img src="' . get_product($id)["DescriptionProduct"]["Image"] . '" alt=""  style="max-width:150px;"></a>
 							</td>
 							<td class="cart_description">
-								<h4><a href="">Colorblock Scuba</a></h4>
-								<p>Web ID: 1089772</p>
+								<h4><a href="">' . get_product($id)["NameProduct"] . '</a></h4>
 							</td>
 							<td class="cart_price">
-								<p>$59</p>
+								<p>$'. get_product($id)["Price"] . '</p>
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
@@ -183,65 +187,27 @@
 								</div>
 							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
+								<p class="cart_total_price">$'. get_product($id)["Price"] . '</p>
 							</td>
 							<td class="cart_delete">
-								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+								<a class="cart_quantity_delete" href="./php/product/remove_to_cart.php?id=' . $id . '"><i class="fa fa-times"></i></a>
 							</td>
-						</tr>
-
-						<tr>
-							<td class="cart_product">
-								<a href=""><img src="images/cart/two.png" alt=""></a>
-							</td>
-							<td class="cart_description">
-								<h4><a href="">Colorblock Scuba</a></h4>
-								<p>Web ID: 1089772</p>
-							</td>
-							<td class="cart_price">
-								<p>$59</p>
-							</td>
-							<td class="cart_quantity">
-								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
-								</div>
-							</td>
-							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
-							</td>
-							<td class="cart_delete">
-								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
-							</td>
-						</tr>
-						<tr>
-							<td class="cart_product">
-								<a href=""><img src="images/cart/three.png" alt=""></a>
-							</td>
-							<td class="cart_description">
-								<h4><a href="">Colorblock Scuba</a></h4>
-								<p>Web ID: 1089772</p>
-							</td>
-							<td class="cart_price">
-								<p>$59</p>
-							</td>
-							<td class="cart_quantity">
-								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
-								</div>
-							</td>
-							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
-							</td>
-							<td class="cart_delete">
-								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
-							</td>
-						</tr>
+						</tr>';
+						}
+						?>
 					</tbody>
+
 				</table>
+					<h2 style="margin-left:50px;">
+						Total : $
+						<?php 
+						$total = 0;
+						foreach ($product_list = json_decode($_COOKIE["cart_products"], true) as &$id) {
+							$total += get_product($id)["Price"];
+						}
+						echo $total;
+						?>
+					</h2>
 			</div>
 		</div>
 	</section> <!--/#cart_items-->

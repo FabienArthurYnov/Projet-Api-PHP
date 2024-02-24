@@ -132,20 +132,21 @@
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Features Items</h2>
 						<div class="wrap_cards">
-							<div class="card_item_main_page">
+
+							<?php
+
+							foreach(get_all_products() as &$product_raw){
+								$id = $product_raw -> ProductId;
+								$product = get_product($id);
+
+							echo '<div class="card_item_main_page">
 								<div class="product-image-wrapper">
 									<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="./product-details.php?id=1"><img src=<?php echo get_product(1)["DescriptionProduct"]["Image"];?> alt="" /></a>
-												<h2>$
-												<?php 
-													echo get_product(1)["Price"];
-												?></h2>
-												<p>
-												<?php 
-													echo get_product(1)["NameProduct"];
-												?></p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												<a href="./product-details.php?id=' . $product_raw->ProductId . '"><img src="' . $product["DescriptionProduct"]["Image"] . '" alt="" /></a>
+												<h2>$' . $product["Price"] . '</h2>
+												<p>' . $product["NameProduct"] . '</p>
+												<a href="./php/product/add_to_cart.php?id=' . $product_raw ->ProductId . '" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 									</div>
 									<div class="choose">
@@ -154,122 +155,9 @@
 										</ul>
 									</div>
 								</div>
-							</div>
-							<div class="card_item_main_page">
-								<div class="product-image-wrapper">
-									<div class="single-products">
-											<div class="productinfo text-center">
-												<a href="./product-details.php?id=2"><img src=<?php echo get_product(2)["DescriptionProduct"]["Image"];?> alt="" /></a>
-												<h2>$
-												<?php 
-													echo get_product(2)["Price"];
-												?></h2>
-												<p>
-												<?php 
-													echo get_product(2)["NameProduct"];
-												?></p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-									</div>
-									<div class="choose">
-										<ul class="nav nav-pills nav-justified">
-											<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="card_item_main_page">
-								<div class="product-image-wrapper">
-									<div class="single-products">
-											<div class="productinfo text-center">
-												<a href="./product-details.php?id=3"><img src=<?php echo get_product(3)["DescriptionProduct"]["Image"];?> alt="" /></a>
-												<h2>$
-												<?php 
-													echo get_product(3)["Price"];
-												?></h2>
-												<p>
-												<?php 
-													echo get_product(3)["NameProduct"];
-												?></p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-									</div>
-									<div class="choose">
-										<ul class="nav nav-pills nav-justified">
-											<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="card_item_main_page">
-								<div class="product-image-wrapper">
-									<div class="single-products">
-											<div class="productinfo text-center">
-												<a href="./product-details.php?id=4"><img src=<?php echo get_product(4)["DescriptionProduct"]["Image"];?> alt="" /></a>
-												<h2>$
-												<?php 
-													echo get_product(4)["Price"];
-												?></h2>
-												<p>
-												<?php 
-													echo get_product(4)["NameProduct"];
-												?></p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-									</div>
-									<div class="choose">
-										<ul class="nav nav-pills nav-justified">
-											<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="card_item_main_page">
-								<div class="product-image-wrapper">
-									<div class="single-products">
-											<div class="productinfo text-center">
-												<a href="./product-details.php?id=5"><img src=<?php echo get_product(5)["DescriptionProduct"]["Image"];?> alt="" /></a>
-												<h2>$
-												<?php 
-													echo get_product(5)["Price"];
-												?></h2>
-												<p>
-												<?php 
-													echo get_product(5)["NameProduct"];
-												?></p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-									</div>
-									<div class="choose">
-										<ul class="nav nav-pills nav-justified">
-											<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="card_item_main_page">
-								<div class="product-image-wrapper">
-									<div class="single-products">
-											<div class="productinfo text-center">
-												<a href="./product-details.php?id=6"><img src=<?php echo get_product(6)["DescriptionProduct"]["Image"];?> alt="" /></a>
-												<h2>$
-												<?php 
-													echo get_product(6)["Price"];
-												?></h2>
-												<p>
-												<?php 
-													echo get_product(6)["NameProduct"];
-												?></p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-									</div>
-									<div class="choose">
-										<ul class="nav nav-pills nav-justified">
-											<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
+							</div>';
+							}
+							?>
 						</div>
 						
 					</div><!--features_items-->
