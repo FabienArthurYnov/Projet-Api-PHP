@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Cart | E-Shopper</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/price-range.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Cart | E-Shopper</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/prettyPhoto.css" rel="stylesheet">
+	<link href="css/price-range.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<link rel="shortcut icon" href="images/ico/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
 <body>
 	<?php
 	include "./php/product/product.php"
-	?>
+		?>
 	<header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
 			<div class="container">
@@ -54,7 +55,7 @@
 				</div>
 			</div>
 		</div><!--/header_top-->
-		
+
 		<div class="header-middle"><!--header-middle-->
 			<div class="container">
 				<div class="row">
@@ -64,7 +65,8 @@
 						</div>
 						<div class="btn-group pull-right">
 							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+								<button type="button" class="btn btn-default dropdown-toggle usa"
+									data-toggle="dropdown">
 									USA
 									<span class="caret"></span>
 								</button>
@@ -73,9 +75,10 @@
 									<li><a href="">UK</a></li>
 								</ul>
 							</div>
-							
+
 							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+								<button type="button" class="btn btn-default dropdown-toggle usa"
+									data-toggle="dropdown">
 									DOLLAR
 									<span class="caret"></span>
 								</button>
@@ -93,20 +96,24 @@
 								<li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="cart.html" class="active"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="login.php"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="#" class="active" id="effacerCookie"><i class="fa fa-lock"></i>
+										Déconnecter</a></li>
+							</ul>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div><!--/header-middle-->
-	
+
 		<div class="header-bottom"><!--header-bottom-->
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-9">
 						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<button type="button" class="navbar-toggle" data-toggle="collapse"
+								data-target=".navbar-collapse">
 								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
@@ -117,28 +124,31 @@
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="index.php">Home</a></li>
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Products</a></li>
-										<li><a href="product-details.html">Product Details</a></li> 
-										<li><a href="checkout.html">Checkout</a></li> 
-										<li><a href="cart.html" class="active">Cart</a></li> 
-										<li><a href="login.html">Login</a></li> 
-                                    </ul>
-                                </li> 
-								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="blog.html">Blog List</a></li>
-										<li><a href="blog-single.html">Blog Single</a></li>
-                                    </ul>
-                                </li> 
-								<li><a href="404.html">404</a></li>
-								<li><a href="contact-us.html">Contact</a></li>
+									<ul role="menu" class="sub-menu">
+										<li><a href="shop.html">Products</a></li>
+										<li><a href="product-details.html">Product Details</a></li>
+										<li><a href="checkout.html">Checkout</a></li>
+										<li><a href="cart.html" class="active">Cart</a></li>
+										<li><a href="login.php">Login</a></li>
+										<li><a href="#" class="active" id="effacerCookie"><i class="fa fa-lock"></i>
+												Déconnecter</a></li>
+									</ul>
+							</ul>
+							</li>
+							<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
+								<ul role="menu" class="sub-menu">
+									<li><a href="blog.html">Blog List</a></li>
+									<li><a href="blog-single.html">Blog Single</a></li>
+								</ul>
+							</li>
+							<li><a href="404.html">404</a></li>
+							<li><a href="contact-us.html">Contact</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="search_box pull-right">
-							<input type="text" placeholder="Search"/>
+							<input type="text" placeholder="Search" />
 						</div>
 					</div>
 				</div>
@@ -150,8 +160,8 @@
 		<div class="container">
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
-				  <li><a href="#">Home</a></li>
-				  <li class="active">Shopping Cart</li>
+					<li><a href="#">Home</a></li>
+					<li class="active">Shopping Cart</li>
 				</ol>
 			</div>
 			<div class="table-responsive cart_info">
@@ -169,27 +179,27 @@
 					<tbody>
 						<?php
 						$nb_in_cart = array_count_values(json_decode($_COOKIE["cart_products"], true)); // nb of item for each id
-
+						
 						foreach ($product_list = array_unique(json_decode($_COOKIE["cart_products"], true)) as &$id) {
 							echo '<tr>
 							<td class="cart_product">
-								<a href="./product-details.php?id='.$id.'"><img src="' . get_product($id)["DescriptionProduct"]["Image"] . '" alt=""  style="max-width:150px;"></a>
+								<a href="./product-details.php?id=' . $id . '"><img src="' . get_product($id)["DescriptionProduct"]["Image"] . '" alt=""  style="max-width:150px;"></a>
 							</td>
 							<td class="cart_description">
 								<h4><a href="">' . get_product($id)["NameProduct"] . '</a></h4>
 							</td>
 							<td class="cart_price">
-								<p>$'. get_product($id)["Price"] . '</p>
+								<p>$' . get_product($id)["Price"] . '</p>
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href="./php/product/add_to_cart.php?id='.$id.'"> + </a>
+									<a class="cart_quantity_up" href="./php/product/add_to_cart.php?id=' . $id . '"> + </a>
 									<input disabled class="cart_quantity_input" type="text" name="quantity" value="' . $nb_in_cart[$id] . '" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href="./php/product/remove_to_cart.php?id='.$id.'"> - </a>
+									<a class="cart_quantity_down" href="./php/product/remove_to_cart.php?id=' . $id . '"> - </a>
 								</div>
 							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">$'. get_product($id)["Price"]*$nb_in_cart[$id] . '</p>
+								<p class="cart_total_price">$' . get_product($id)["Price"] * $nb_in_cart[$id] . '</p>
 							</td>
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href="./php/product/remove_to_cart.php?id=' . $id . '"><i class="fa fa-times"></i></a>
@@ -200,16 +210,16 @@
 					</tbody>
 
 				</table>
-					<h2 style="margin-left:50px;">
-						Total : $
-						<?php 
-						$total = 0;
-						foreach ($product_list = json_decode($_COOKIE["cart_products"], true) as &$id) {
-							$total += get_product($id)["Price"];
-						}
-						echo $total;
-						?>
-					</h2>
+				<h2 style="margin-left:50px;">
+					Total : $
+					<?php
+					$total = 0;
+					foreach ($product_list = json_decode($_COOKIE["cart_products"], true) as &$id) {
+						$total += get_product($id)["Price"];
+					}
+					echo $total;
+					?>
+				</h2>
 			</div>
 		</div>
 	</section> <!--/#cart_items-->
@@ -218,7 +228,8 @@
 		<div class="container">
 			<div class="heading">
 				<h3>What would you like to do next?</h3>
-				<p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
+				<p>Choose if you have a discount code or reward points you want to use or would like to estimate your
+					delivery cost.</p>
 			</div>
 			<div class="row">
 				<div class="col-sm-6">
@@ -250,7 +261,7 @@
 									<option>Canada</option>
 									<option>Dubai</option>
 								</select>
-								
+
 							</li>
 							<li class="single_field">
 								<label>Region / State:</label>
@@ -264,7 +275,7 @@
 									<option>Canada</option>
 									<option>Dubai</option>
 								</select>
-							
+
 							</li>
 							<li class="single_field zip-field">
 								<label>Zip Code:</label>
@@ -283,8 +294,8 @@
 							<li>Shipping Cost <span>Free</span></li>
 							<li>Total <span>$61</span></li>
 						</ul>
-							<a class="btn btn-default update" href="">Update</a>
-							<a class="btn btn-default check_out" href="">Check Out</a>
+						<a class="btn btn-default update" href="">Update</a>
+						<a class="btn btn-default check_out" href="">Check Out</a>
 					</div>
 				</div>
 			</div>
@@ -316,7 +327,7 @@
 								<h2>24 DEC 2014</h2>
 							</div>
 						</div>
-						
+
 						<div class="col-sm-3">
 							<div class="video-gallery text-center">
 								<a href="#">
@@ -331,7 +342,7 @@
 								<h2>24 DEC 2014</h2>
 							</div>
 						</div>
-						
+
 						<div class="col-sm-3">
 							<div class="video-gallery text-center">
 								<a href="#">
@@ -346,7 +357,7 @@
 								<h2>24 DEC 2014</h2>
 							</div>
 						</div>
-						
+
 						<div class="col-sm-3">
 							<div class="video-gallery text-center">
 								<a href="#">
@@ -371,7 +382,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="footer-widget">
 			<div class="container">
 				<div class="row">
@@ -428,33 +439,38 @@
 							<h2>About Shopper</h2>
 							<form action="#" class="searchform">
 								<input type="text" placeholder="Your email address" />
-								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+								<button type="submit" class="btn btn-default"><i
+										class="fa fa-arrow-circle-o-right"></i></button>
 								<p>Get the most recent updates from <br />our site and be updated your self...</p>
 							</form>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
 					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
-					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+					<p class="pull-right">Designed by <span><a target="_blank"
+								href="http://www.themeum.com">Themeum</a></span></p>
 				</div>
 			</div>
 		</div>
-		
+
 	</footer><!--/Footer-->
-	
 
 
-    <script src="js/jquery.js"></script>
+
+	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/cookie.js" type="module"></script>
+	<script src="js/index.js" type="module"></script>
 </body>
+
 </html>
