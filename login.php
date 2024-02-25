@@ -59,7 +59,7 @@ function register()
 	$found = false;
 
 	for ($i = 0; $i < sizeof($user); $i++) {
-		if ($email == $user[$i]["Email"] and $password == $user[$i]["Password"]) {
+		if ($email == $user[$i]["Email"]) {
 			$found = true;
 			break;
 		}
