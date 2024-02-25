@@ -168,10 +168,12 @@
 					</thead>
 					<tbody>
 						<?php
-						foreach ($product_list = json_decode($_COOKIE["cart_products"], true) as &$id) {
+						$nb_in_cart = array_count_values(json_decode($_COOKIE["cart_products"], true)); // nb of item for each id
+
+						foreach ($product_list = array_unique(json_decode($_COOKIE["cart_products"], true)) as &$id) {
 							echo '<tr>
 							<td class="cart_product">
-								<a href=""><img src="' . get_product($id)["DescriptionProduct"]["Image"] . '" alt=""  style="max-width:150px;"></a>
+								<a href="./product-details.php?id='.$id.'"><img src="' . get_product($id)["DescriptionProduct"]["Image"] . '" alt=""  style="max-width:150px;"></a>
 							</td>
 							<td class="cart_description">
 								<h4><a href="">' . get_product($id)["NameProduct"] . '</a></h4>
@@ -181,13 +183,13 @@
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
+									<a class="cart_quantity_up" href="./php/product/add_to_cart.php?id='.$id.'"> + </a>
+									<input disabled class="cart_quantity_input" type="text" name="quantity" value="' . $nb_in_cart[$id] . '" autocomplete="off" size="2">
+									<a class="cart_quantity_down" href="./php/product/remove_to_cart.php?id='.$id.'"> - </a>
 								</div>
 							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">$'. get_product($id)["Price"] . '</p>
+								<p class="cart_total_price">$'. get_product($id)["Price"]*$nb_in_cart[$id] . '</p>
 							</td>
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href="./php/product/remove_to_cart.php?id=' . $id . '"><i class="fa fa-times"></i></a>

@@ -163,6 +163,10 @@
 						</div>
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
+								<?php
+								if (isset($_COOKIE["userCookie"]) && json_decode($_COOKIE["userCookie"], true)["admin"]) {
+								echo '<button> <a href="./php/product/remove_product.php?id='.$_GET["id"].'">Remove product</a></button>';}
+								?>
 								<img src="images/product-details/new.jpg" class="newarrival" alt="" />
 								<h2><?php echo get_product($_GET['id'])["NameProduct"];?></h2>
 								<span>
