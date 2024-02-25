@@ -1,3 +1,10 @@
-Thank you for downloading this Bootstrap theme. This theme was downloaded from UseBootstrap.com
+Projet e-commerce PHP
 
-If you need more themes, visit our website: http://usebootstrap.com/
+Doit être lancer avec l'api Csharp, connecté à la database adapté.
+
+
+Fait par
+- Fabien ARTHUR
+- Alexandre JIN
+- Gabriel GARCIA
+- Mathieu DENIEUL LE DIRAISON
