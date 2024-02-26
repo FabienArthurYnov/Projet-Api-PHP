@@ -14,6 +14,5 @@ document.getElementById("effacerCookie").addEventListener("click", function (eve
 
   // Effacer le cookie en définissant sa date d'expiration dans le passé
   document.cookie = "userCookie=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-  document.cookie = "cart_products=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   window.location.reload();
 });
